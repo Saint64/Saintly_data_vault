@@ -32,8 +32,12 @@ img {
   var currentTime = new Date();
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
   var suffix = "AM";  // use AM by default
 
+  if (seconds < 10)
+    seconds = "0" + seconds;
+  
   if (minutes < 10)
     minutes = "0" + minutes;
 
@@ -46,7 +50,7 @@ img {
   }
 
   document.write("<b><div id='d1'>" + hours + ":" +
-   minutes + " " + suffix + "</div></b>");
+   minutes + ":" + seconds + " " + suffix + "</div></b>");
 
   </script>
 </body>
