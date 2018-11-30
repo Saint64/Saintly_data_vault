@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AP Survey Redirector  </title>
+    </head>
+    <body>
+
+<script>
+    var randomlinks=new Array()
+
+    randomlinks[0]="https://goo.gl/forms/hAl18EQaMsdA96LD2"
+    randomlinks[1]="https://goo.gl/forms/75V4BSD6PZM6cYne2"
+    randomlinks[2]="https://goo.gl/forms/7PuxXLDLnwGfQitR2"
+    randomlinks[3]="https://goo.gl/forms/i1ASCA03g1LBjLlp2"
+    function randomlink(){
+    window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+}
+</script>
+<form method="post">
+<p><input type="button" name="B1" value="Click to be redirected to your survey." onclick="randomlink()"></p> </form>
+    </body>
+</html>
